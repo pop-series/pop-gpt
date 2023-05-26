@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>pop-gpt</title>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!-- <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    /> -->
+    <link href="./styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="fashion-stylist">
+      <h1>fashion stylist</h1>
+      <div id="outfit-display" class="table">
+        <div class="row">
+          <div id="upper-display" class="cell"></div>
+        </div>
+        <div class="row">
+            <div id="bottom-display" class="cell"></div>
+        </div>
+        <div class="row">
+            <div id="accessory-display" class="cell"></div>
+          </div>
+      </div>
+    </div>
+
+    <script src="./dist/renderer.js"></script>
+  </body>
+</html>

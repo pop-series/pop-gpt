@@ -1,0 +1,25 @@
+.outfit-display {
+    min-width: 100px;
+    min-height: 100px;
+  }
+  
+  #outfit-display {
+    font-family: "Courier New", Courier, monospace;
+  }
+  
+  #outfit-display .table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #outfit-display .row {
+    display: table-row;
+  }
+  
+  #outfit-display .cell {
+    display: table-cell;
+    padding: 4px;
+    border: 1px solid #ccc;
+  }
+  

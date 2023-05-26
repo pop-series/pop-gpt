@@ -1,0 +1,51 @@
+{
+  "devDependencies": {
+    "@electron-forge/cli": "^6.1.1",
+    "@electron-forge/maker-deb": "^6.1.1",
+    "@electron-forge/maker-rpm": "^6.1.1",
+    "@electron-forge/maker-squirrel": "^6.1.1",
+    "@electron-forge/maker-zip": "^6.1.1",
+    "@typescript-eslint/eslint-plugin": "4.33.0",
+    "@typescript-eslint/parser": "4.33.0",
+    "electron": "24.3.1",
+    "eslint": "7.32.0",
+    "prettier": "2.8.8",
+    "typescript": "4.8.3"
+  },
+  "name": "pop-gpt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "check": "prettier --check .",
+    "format": "prettier --write .",
+    "lint": "eslint -c .eslintrc --ext .ts ./src",
+    "make": "electron-forge make",
+    "package": "electron-forge package",
+    "postinstall": "./scripts/postinstall.sh",
+    "start": "npm run build && electron-forge start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/pop-series/pop-gpt.git"
+  },
+  "keywords": [
+    "GPT",
+    "AI",
+    "fashion",
+    "ChatGPT"
+  ],
+  "author": "pop-series",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pop-series/pop-gpt/issues"
+  },
+  "homepage": "https://github.com/pop-series/pop-gpt#readme",
+  "dependencies": {
+    "electron-squirrel-startup": "1.0.0",
+    "openai": "3.2.1"
+  }
+}
