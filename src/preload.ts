@@ -19,10 +19,11 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-let indexBridge = {
+const indexBridge = {
   doSomething: async () => {
     const result = await ipcRenderer.invoke("doSomething");
     console.log("hello");
+    console.log(result);
   },
 };
 

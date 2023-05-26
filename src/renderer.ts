@@ -5,5 +5,7 @@
 // Use preload.js to selectively enable features
 // needed in the renderer process.
 
-function doSomething() {}
+function doSomething() {
+  console.log("hello");
+}
 doSomething();
