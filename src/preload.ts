@@ -22,11 +22,11 @@ window.addEventListener("DOMContentLoaded", () => {
 let indexBridge = {
   doSomething: async () => {
     const result = await ipcRenderer.invoke("doSomething");
-    console.log("hello")
-  }
+    console.log("hello");
+  },
 };
 
 contextBridge.exposeInMainWorld("indexBridge", indexBridge);
 ipcRenderer.on("gotData", (event, json) => {
   console.log(json);
-})
+});

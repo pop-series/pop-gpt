@@ -1,7 +1,7 @@
 import { app, BrowserWindow, ipcMain, net } from "electron";
 import * as path from "path";
 
-let mainWindow :BrowserWindow
+let mainWindow: BrowserWindow;
 
 function createWindow() {
   // Create the browser window.
@@ -45,8 +45,8 @@ app.on("window-all-closed", () => {
 // In this file you can include the rest of your app"s specific main process
 // code. You can also put them in separate files and require them here.
 ipcMain.handle("doSomething", () => {
-  const request = net.request("https://www.boredpai.com/api/activity/")
-  request.on("response",  (response) => {
+  const request = net.request("https://www.boredpai.com/api/activity/");
+  request.on("response", (response) => {
     const data: Uint8Array[] = [];
     response.on("data", (chunk) => {
       data.push(chunk);
@@ -56,7 +56,7 @@ ipcMain.handle("doSomething", () => {
       const json = Buffer.concat(data).toString();
       console.log(json);
       mainWindow.webContents.send("gotData", json);
-    })
+    });
   });
 
   request.end();
